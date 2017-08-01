@@ -239,3 +239,7 @@ function createLi(text, joinTo) {
 //  if(screenW<)
 })()
 //small Test of what is being used
+
+// Now we are going to make Fun Stuff
+
+//Create SlideShow
