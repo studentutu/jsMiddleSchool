@@ -1,2 +1,2 @@
 # jsMiddleSchool
-It is my repository for learning JS with all it's beaty!
+It is my repository for learning JS with all its beaty!
