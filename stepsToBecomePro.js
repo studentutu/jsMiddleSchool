@@ -2,7 +2,7 @@
 
 
 // First - All Body into Gray
-document.body.style.backgroundColor= "#ffffff";
+//document.body.style.backgroundColor= "#ffffff";
 
 
 // Create big Container in the middle of page!
@@ -13,8 +13,13 @@ var divContainer= document.createElement("div");
     divContainer.style.position="relative"; // need to be positioned  -- non absolute-- --non fixed-- relative
     divContainer.style.margin= "auto";
     divContainer.style.width="90%";
+    divContainer.style.height="1024px";
 
 //created big Div Container in the middle of the page!
+// Create paralax img
+document.body.onload=createParalax();
+
+//Create Navbar, Side Bar, Main Part
 createNavBar();
 createSideBarWithMainPost();
 
@@ -44,7 +49,7 @@ function createSideBarWithMainPost(){
         anotherDiv.style.borderRadius="0px 0px 10px 10px";
         //anotherDiv.style.textAlign="center";
         //anotherDiv.style.border= "2px solid  red ";
-        //anotherDiv.style.height="100px";
+        //anotherDiv.style.height="1024px";
 
 // now create left side and Main Side
     let leftSide=document.createElement("div");
@@ -60,8 +65,9 @@ function createSideBarWithMainPost(){
 
 
         anotherDiv.appendChild(leftSide);
-        leftSide.style.height="600px";
+        leftSide.style.height="1024px";
         leftSide.style.backgroundColor = "grey";
+        //leftSide.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         //leftSide.style.border="2px solid #550000";
 
     let mainSide =document.createElement("div");
@@ -71,6 +77,7 @@ function createSideBarWithMainPost(){
         mainSide.style.padding="0";
         mainSide.style.margin="0";
         mainSide.style.width = "80%";
+        mainSide.style.height="1024px";
 
         let imgMain=document.createElement("img");
         imgMain.src="https://img-9gag-fun.9cache.com/photo/a888Vj6_700b.jpg";
@@ -79,8 +86,9 @@ function createSideBarWithMainPost(){
         imgMain.style.width="100%";
 
         anotherDiv.appendChild(mainSide);
-        mainSide.style.height ="600px";
-        mainSide.style.backgroundColor = "#123456";
+        //mainSide.style.height ="600px";
+        //mainSide.style.backgroundColor = "#123456";
+        mainSide.style.backgroundColor = 'rgba(255, 255, 255, 0)';
         //mainSide.style.border="2px solid #000055";
 
 
@@ -168,7 +176,7 @@ function createLi(text, joinTo) {
 
     }//createLi
 
-      function createSideBar(Side) {
+function createSideBar(Side) {
         //create Upper side bar and lower side bar
           let UppperSide= document.createElement("div");
             UppperSide.id="Upper";
@@ -189,6 +197,7 @@ function createLi(text, joinTo) {
             //ulSide.style.textAlign="center";
             //ulSide.style.overflow="hidden";
             ulSide.style.backgroundColor="#aaaaaa";
+
                 createLi("First",ulSide);
                 createLi("Second",ulSide);
                 createLi("Third",ulSide);
@@ -227,8 +236,28 @@ function createLi(text, joinTo) {
             LowerSide.appendChild(imgSide);
 
 
-      }
+}// Create Side-bar
 
+function  createParalax() {
+    //let imgBackg=document.createElement("img");
+    //imgBackg.src="Fire-01.jpg";
+    //document.body.appendChild(imgBackg);
+    document.body.style.backgroundImage ="url('http://solarhythmia.com/art-gallery/fractals/800x600/birth-of-a-galaxy-800x600.jpg') ";
+    document.body.style.backgroundRepeat ="no-repeat";
+    document.body.style.backgroundAttachment = "fixed";
+    document.body.style.backgroundSize  = "cover";
+      // doesn't work!! becouse it is a BACKGROUND!!!!!
+    /*
+    var bImage=document.body.style;
+    bImage.backgroundAttachment ="fixed";
+    bImage.repeat="no-repeat";
+    bImage.width="1024px";
+    bImage.height="1024px";
+    */
+    // doesn't work!! becouse it is a BACKGROUND!!!!!
+
+
+}
 
 
 //small Test of what is being used
