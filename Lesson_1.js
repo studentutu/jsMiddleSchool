@@ -31,7 +31,8 @@ context.strokeStyle="green";
 
 var globalWidth=5;
 
-var hype=(function (x,y) {  // initialize IIFE
+// initialize IIFE
+var hype=(function (x,y) {
 
         var nextPosX=x;
         var nextPosY=y;
@@ -52,9 +53,9 @@ for (let i=0;i<20;i++){
 }
 
 var firePicture = document.createElement("img");
-firePicture.src = "C:/JSstuff/fireplace.jpg" ;
+firePicture.src = "fireplace.jpg" ;
 //protoDiv.appendChild(firePicture);
-protoDiv.style.backgroundImage="url('C:/JSstuff/fireplace.jpg')";
+protoDiv.style.backgroundImage="url('fireplace.jpg')";
 protoDiv.style.backgroundRepeat ="no-repeat";
 //firePicture.style.position = "fixed";
 //firePicture.style.left=8;
@@ -71,3 +72,8 @@ protoDiv.style.backgroundRepeat ="no-repeat";
 //context.moveTo(0,0);
 //context.lineTo(145,120);
 //context.stroke();
+
+// New stuff
+
+var slideShow= document.createElement("div");
+slideShow.id="DivShow";
